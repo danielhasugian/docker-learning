@@ -11,6 +11,7 @@ docker ps
 ```
 
 
+
 ** If images not there, then docker will get from Registry"
 docker run hello-world
 docker run --name nginx-demo -p 1234:80 nginx:alpine
