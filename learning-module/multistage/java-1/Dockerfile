@@ -1,6 +1,6 @@
 FROM adoptopenjdk/openjdk11 AS build-env
 WORKDIR /source
-COPY src/ .
+COPY src .
 RUN javac -verbose HelloWorld.java
 
 FROM adoptopenjdk/openjdk11:jre-11.0.8_10-ubi-minimal

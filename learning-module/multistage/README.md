@@ -1,6 +1,4 @@
-## Docker Command
-
-Sample multi-stage
+# Multi Stage
 
 
 ```shell
@@ -17,16 +15,4 @@ docker run hello-world-image
 # to run images
 ```
 
-## Output
-```shell
-Hello World !!!
-```
 
-## Clean up
-```shell
-docker images hello-world-image 
-# to check images
-
-docker images rmi hello-world-image 
-# to remove images
-```
