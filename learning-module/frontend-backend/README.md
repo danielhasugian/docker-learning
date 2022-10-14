@@ -1,18 +1,18 @@
 # Docker
 
-## nginx
+## Command
 ```shell
-docker build --tag dotnet-backend .
+docker build ./backend --tag dotnet-backend
 docker run -p 2222:80 --name api dotnet-backend
 
-docker build --tag dotnet-frontend .
+docker build ./frontend --tag dotnet-frontend
 docker run -p 3333:80 --name html dotnet-frontend
 
 docker network create allianz-proxy
-docker network connect allianz-proxy api   
-docker network connect allianz-proxy html  
+docker network connect allianz-proxy api
+docker network connect allianz-proxy html
 
-docker build --tag dotnet-proxy .
+docker build ./proxy --tag dotnet-proxy
 docker run -p 4444:80 --network allianz-proxy dotnet-proxy
 
 docker run -p 2222:80 --network allianz-proxy --name api dotnet-backend
@@ -20,7 +20,7 @@ docker run -p 3333:80 --network allianz-proxy --name html dotnet-frontend
 ```
 
 
-## Docker compose
+## With Docker compose
 ```shell
 docker-compose build
 docker-compose down
