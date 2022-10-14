@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  html:
+    build: ./frontend
+    image: localhost:5000/html
+    container_name: html
+  api:
+    build: ./backend
+    image: localhost:5000/api
+    container_name: api
+  proxy:
+    build: ./proxy
+    image: localhost:5000/proxy
+    ports:
+      - 9999:80
+    depends_on:
+      - api
+      - html

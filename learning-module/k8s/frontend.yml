@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: html
+  labels:
+    app: demo
+    name: html
+spec:
+  containers:
+    - name: html
+      image: localhost:5000/html:latest
+      ports:
+        - name: http
+          containerPort: 80
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: html
+spec:
+  selector:
+    app: demo
+    name: html
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: http

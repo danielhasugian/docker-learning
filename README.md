@@ -1,6 +1,5 @@
 # Docker
 
-
 ## Command 
 ```shell
 docker build
@@ -9,8 +8,8 @@ docker run
 docker rm
 docker ps
 ```
-
-
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
 
 ** If images not there, then docker will get from Registry"
 docker run hello-world

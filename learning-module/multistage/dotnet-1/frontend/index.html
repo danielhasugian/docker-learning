@@ -1,0 +1,13 @@
+<html>
+
+<body>
+<a>Hello Allianz!</a>
+<button
+        onclick="fetch('/api/WeatherForecast')
+                        .then(response => response.json())
+                        .then(data => document.getElementById('list').innerHTML = data.map(element => `<li>${new Date(element.date).toLocaleString()}: ${element.summary}, ${element.temperatureC} &#8451;</li>`).join(''))">fetch!</button>
+<ul id="list">
+</ul>
+</body>
+
+</html>

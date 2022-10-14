@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  html:
+    image: localhost:5000/html
+    container_name: html
+  api:
+    image: localhost:5000/api
+    container_name: api
+  proxy:
+    image: localhost:5000/proxy
+    ports:
+      - 9999:80
+    depends_on:
+      - api
+      - html
