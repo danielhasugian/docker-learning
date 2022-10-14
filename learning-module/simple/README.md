@@ -1,12 +1,12 @@
 # Simple
 
-## Hello world
+## Run Hello world
 ```shell
 docker run hello-world
 # to run image that print out 'hello world'
 
 ```
-## nginx
+## Run nginx
 ```shell
 docker run nginx:alpine
 # to run image nginx
@@ -37,7 +37,7 @@ EOF
 
 ```
 
-## nginx with Dockerfile
+## Run nginx with Dockerfile
 With sample file nginx/index.html & nginx/Dockerfile
 ```shell
 docker build nginx/ -t nginx-custom -f Dockerfile
@@ -45,12 +45,12 @@ docker run -d -p 3333:80 nginx-custom
 ```
 
 
-## log-event 
+## Create sample log-event 
 ```shell
 docker build log-event/ -t i-log-event
 docker run i-log-event cat log.txt
-#Run is executed when image build time.
-#Entry point is executed when container is starting
+#'Run' is executed when image build time.
+#'Entry point' is executed when container is starting
 ```
 
 

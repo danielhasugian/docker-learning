@@ -27,6 +27,8 @@ docker-compose down
 docker-compose up
 
 docker run -d -p 5000:5000 --restart=always --name registry registry:2
+#Install docker registry
+
 docker container stop registry && docker container rm -v registry
 
 docker-compose push
